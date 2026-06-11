@@ -19,3 +19,11 @@ foreign key ([OS_id]) references [dbo].[dim_OS] ([OS_id]),
 foreign key ([Processor_id]) references [dbo].[dim_processor] ([Processor_id]),
 foreign key ([Ram_id] )references [dbo].[dim_ram] ([Ram_id])
 );
+
+alter table [dbo].[fact_laptop]
+add foreign key ([Storage_id])
+references [dbo].[dim_storage] ([Storage_id]);
+
+alter table [dbo].[fact_laptop]
+add foreign key ([Touch_screen_id])
+references [dbo].[dim_touchScreen] ([Touch_screen_id]);
