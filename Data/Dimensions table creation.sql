@@ -35,7 +35,10 @@ create table dim_storage(
 Storage_id int identity(1,1) primary key,
 Storage_capacity_GB nvarchar(50)
 );
-
+-------------
+alter table [dbo].[dim_storage]
+add [Storage_type] nvarchar(50);
+---------------
 create table dim_graphics(
 Graphics_id int identity(1,1) primary key,
 Graphics_name nvarchar(50),
